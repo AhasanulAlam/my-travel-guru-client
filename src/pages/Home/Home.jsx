@@ -12,7 +12,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/destinations`)
+        fetch(`https://my-travel-guru-server-ahasanulalam.vercel.app/destinations`)
             .then(res => res.json())
             .then(data => {
                 setDestinations(data)

@@ -21,12 +21,12 @@ const router = createBrowserRouter([
             {
                 path: '/destinations/:city_id',
                 element: <Booking></Booking>,
-                loader: ({params}) => fetch(`http://localhost:5000/destinations/${params.city_id}`)
+                loader: ({params}) => fetch(`https://my-travel-guru-server-ahasanulalam.vercel.app/destinations/${params.city_id}`)
             },
             {
                 path: '/hotels/:city_id',
                 element: <PrivateRoute><Hotels></Hotels></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/hotels/${params.city_id}`)
+                loader: ({params}) => fetch(`https://my-travel-guru-server-ahasanulalam.vercel.app/hotels/${params.city_id}`)
             },
             {
                 path: 'login',
